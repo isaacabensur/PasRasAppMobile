@@ -1,8 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="700dip"
+    android:layout_marginTop="0dip"
+    android:background="#000000" >
+ 
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp" >
+ 
+        <ImageView
+            android:id="@+id/imgenvista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.34"
+            android:paddingEnd="25px"
+            android:paddingTop="48px"
+            android:src="@drawable/logo2" />
+ 
+        <EditText
+            android:id="@+id/correoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:text="j.aguilar@gmail.com"
+            android:textColor="#FFBF75"
+            android:hint="@string/txtusuariolog"
+            android:inputType="textEmailAddress"
+            android:paddingTop="55dp" />
+ 
+        <EditText
+            android:id="@+id/claveUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="abcd"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:textColor="#FFBF75"
+            android:hint="@string/txtclavelog"
+            android:inputType="textPassword"
+            android:paddingEnd="55dp" />
+ 
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="30dp" >
+        </View>
+ 
+        <Button
+            android:id="@+id/btningreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#E4F9FC"
+            android:paddingEnd="50dp"
+            android:text="@string/lblboton"
+            android:textAlignment="center"
+            android:textColor="#544409" />
+ 
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="60dp" >
+        </View>
+    </LinearLayout>
+ 
+    <TextView
+        android:id="@+id/txtnuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#75A4FF"
+        android:linksClickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="16dp"
+        android:text="@string/lblNuevousuario" />
+ 
+</RelativeLayout>

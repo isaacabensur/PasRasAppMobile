@@ -4,5 +4,11 @@
     <string name="app_name">PasRasApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="textEmailAddress">Settings</string>
+    <string name="txtclavelog">Settings</string>
+    <string name="lblboton">Settings</string>
+    <string name="lblNuevousuario">Settings</string>
+    <string name="txtusuariolog">Settings</string>
+    
+   
 </resources>
