@@ -46,9 +46,10 @@ public class Constants {
 	public static String apiNombre="&nombre=";
 	public static String apiApellidos="&apellidos=";
 	public static String apiCorreo="&correo=";
-	public static String apicelular="&celular=";
-	public static String apiDistrito="&distrito=";
-	public static String apiClave="&clave=";
+	public static String apiIdUsuario="&idusuario=";
+	//public static String apicelular="&celular=";
+	//public static String apiDistrito="&distrito=";
+	//public static String apiClave="&clave=";
 	
 	
 	/*VARIABLES A MANDAR */

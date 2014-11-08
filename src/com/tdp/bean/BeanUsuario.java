@@ -6,19 +6,48 @@ import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
+	
 public class BeanUsuario  implements Parcelable{
 	
 	public String nombre;
 	public String apellidos;
 	public String correo;
-	public String celular;
-	public String distrito;
-	public String regsitro;
+	public int cod_tip;
+	public int idusuario;
+
+
+
+
+
+
+
+
+
+	public int getCod_tip() {
+		return cod_tip;
+	}
+
+
+
+	public void setCod_tip(int cod_tip) {
+		this.cod_tip = cod_tip;
+	}
+
+
+
+	public int getIdusuario() {
+		return idusuario;
+	}
+
+
+
+	public void setIdusuario(int idusuario) {
+		this.idusuario = idusuario;
+	}
 
 	public String clave;
 	
-	public Integer id;
+
 
 	
 	   public  BeanUsuario() {
@@ -33,10 +62,9 @@ public class BeanUsuario  implements Parcelable{
 	 
 	              this.apellidos= in.readString();
 	              this.nombre = in.readString();
-	              this.id= in.readInt();
+	              this.idusuario= in.readInt();
 	              this.correo= in.readString();
-	              this.celular= in.readString();
-	              this.regsitro= in.readString();
+	            
 	              this.clave= in.readString();
 	        }
 	
@@ -65,29 +93,12 @@ public class BeanUsuario  implements Parcelable{
 		this.correo = correo;
 	}
 
-	public String getCelular() {
-		return celular;
-	}
 
-	public void setCelular(String celular) {
-		this.celular = celular;
-	}
 
-	public String getDistrito() {
-		return distrito;
-	}
 
-	public void setDistrito(String distrito) {
-		this.distrito = distrito;
-	}
 
-	public String getRegsitro() {
-		return regsitro;
-	}
 
-	public void setRegsitro(String regsitro) {
-		this.regsitro = regsitro;
-	}
+
 
 	public String getClave() {
 		return clave;
@@ -97,13 +108,6 @@ public class BeanUsuario  implements Parcelable{
 		this.clave = clave;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	@Override
 	public int describeContents() {
@@ -117,11 +121,13 @@ public class BeanUsuario  implements Parcelable{
 
 				 dest.writeString(this.apellidos);
 	        dest.writeString(this.nombre);
-		        dest.writeInt(this.id);
+		        dest.writeInt(this.idusuario);
 		        dest.writeString(this.correo);
-				 dest.writeString(this.celular);     
+		      
+		        dest.writeInt(this.cod_tip);
+			  
 				 dest.writeString(this.clave);
-				 dest.writeString(this.regsitro);  
+				
 		        
 		        
 	}
