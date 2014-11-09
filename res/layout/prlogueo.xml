@@ -19,7 +19,7 @@
             android:layout_weight="1.34"
             android:paddingEnd="25px"
             android:paddingTop="48px"
-            android:src="@drawable/logo2" />
+            android:src="@drawable/telefonicalogo" />
  
         <EditText
             android:id="@+id/correoUsuario"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:ems="10"
-            android:text="j.aguilar@gmail.com"
+            android:text="micorreo@micorreo.com"
             android:textColor="#FFBF75"
             android:hint="@string/txtusuariolog"
             android:inputType="textEmailAddress"
@@ -37,7 +37,7 @@
             android:id="@+id/claveUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="abcd"
+            android:text="123456"
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:textColor="#FFBF75"

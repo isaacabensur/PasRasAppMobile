@@ -59,7 +59,7 @@ public class ActividadPrincipal extends Activity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		
-		
+		 request = new RequestAsynctask(this);
 		btningresar.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -81,7 +81,7 @@ public class ActividadPrincipal extends Activity {
                     System.out.println("URL : "+url);
                      
                     request.validaUsuario(url);
-                     
+                   
                      
                     //Toast.makeText(getApplicationContext(), "Ingreso Correctamente", Toast.LENGTH_SHORT).show();
                      
@@ -139,6 +139,9 @@ startActivity(intent);
          
 	        try {
 	             
+	        	
+	        	
+	        	
 	            JSONObject jsonData = new JSONObject (jsonResult);
 	     
 	 
@@ -185,6 +188,8 @@ startActivity(intent);
 	                System.out.println("LLLEHPPPPP 3");
 	                 
 	                //verificaUsuario("");
+	                
+	                mostrarMenuPrincipal();  
 	                 
 	            }else{
 	 

@@ -16,7 +16,12 @@ public class RequestAsynctask {
 	    }
 	  
 	   public void validaUsuario(String url) {
+		   
+		   System.out.println("LLEGAMOS A validaUsuario");
+		   
 	        ValidaUsuario obj = new ValidaUsuario();
+	        
+	 	   System.out.println("LLEGAMOS A validaUsuario 2");
 	        obj.execute(url);
 	    }
 	     

@@ -27,7 +27,7 @@ public class Constants {
 
 	
 	//variables para el API
-	public static String ruta="http://tallerandroid.cesar-pillihuaman.com/";
+	public static String ruta="tallerandroid.cesar-pillihuaman.com/";
 	public static String API="http://"+ruta;
 
 	public static String APIsection="validarusuario.php?";
