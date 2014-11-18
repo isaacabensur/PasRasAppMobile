@@ -33,6 +33,54 @@
 
         </activity>
         
+          
+           <activity
+            android:name=".MainRegistrarActividad"
+            android:label="@string/app_mreiact" >
+
+        </activity>
+        
+           
+            <activity
+            android:name=".MainActividadPrincipal"
+            android:label="@string/app_ActividadPrincipal" >
+
+        </activity>
+        
+            
+             <activity
+            android:name=".MainAsignarEstimado"
+            android:label="@string/app_MainAsignarEstimado" >
+
+        </activity>
+        
+             
+             
+              <activity
+            android:name=".MainPlanificacion"
+            android:label="@string/app_mMainPlanificacion"  >
+
+        </activity>
+        
+              
+              
+               <activity
+            android:name=".MainRegistrarActivReal"
+            android:label="@string/app_MainRegistrarActivReal" >
+
+        </activity>
+        
+               
+               
+                <activity
+            android:name=".MainRegistrarPlanific"
+            android:label="@string/app_MainRegistrarPlanific" >
+
+        </activity>
+        
+                
+         
+        
         
     </application>
 

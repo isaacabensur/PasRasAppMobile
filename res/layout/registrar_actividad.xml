@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+     <TextView
+            android:id="@+id/tx_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/planificacion_de_actividades_semanales" 
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            />   	 
+    
+        <TextView
+            android:id="@+id/tx_res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ract_actividad_para_el_dia" 
+            android:layout_marginBottom="10dp"
+            />
+        
+        <EditText
+            android:id="@+id/ed_dni"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:inputType="text"
+            android:hint="@string/ract_actividad" 
+            android:layout_marginBottom="10dp"
+            />
+
+        
+        
+        <TextView
+            android:id="@+id/tx_TipoActividad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ract_tipo_actividad" 
+            android:layout_marginBottom="10dp"
+            />
+        
+        <EditText
+            android:id="@+id/ed_tipoActividad"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:hint="@string/ract_tipo_actividad" 
+            android:layout_marginBottom="10dp"
+            />
+        
+        <TextView
+            android:id="@+id/tx_nroIPR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ract_nro_ipr"
+            />
+        <EditText
+            android:id="@+id/ed_nroIPR"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:hint="@string/ract_tipo_actividad" 
+            android:layout_marginBottom="10dp"           
+            />
+            
+        <TextView
+            android:id="@+id/tx_nroProy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ract_nro_proyecto"            
+            />
+        <EditText
+            android:id="@+id/ed_nroProy"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:hint="@string/ract_tipo_actividad" 
+            android:layout_marginBottom="10dp"
+            />
+        
+        <TextView
+            android:id="@+id/tx_origen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ract_origen"
+            />
+        <EditText
+            android:id="@+id/ed_origen"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:hint="@string/ract_origen" 
+            android:layout_marginBottom="10dp"
+            />
+        
+         <Button
+            android:id="@+id/btn_registrarActividad"
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="ListarOnclick"
+            android:text="@string/ract_registrar_actividad" />
+         
+        
+
+</LinearLayout>

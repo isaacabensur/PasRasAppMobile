@@ -12,6 +12,34 @@
     <string name="lblboton">Ingresar</string>
     <string name="lblNuevousuario">Settings</string>
     <string name="txtusuariolog">Settings</string>
+    <string name="semana_planificacion">Semana planificacion</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="seleccionar_colaborador">Seleccionar Colaborador</string>
+    <string name="txfechaprogramacion">17/11/2014</string>
+    <string name="planificacion_de_actividades_semanales">Planificacion de Actividades Semanales</string>
+    <string name="semana_a_registrar">Semana del 17/11/2014 al 21/11/2014</string>
+    <string name="ra_agregar_actividad">Agregar Actividad</string>
+    <string name="ract_actividad_para_el_dia">Actividad para el dia 17/11</string>
+    <string name="ract_actividad">Descripcion Actividad</string>
+    <string name="ract_tipo_actividad">Tipo Actividad</string>
+    <string name="ract_nro_proyecto">Nro Proyecto</string>
+    <string name="ract_nro_ipr">Nro IPR</string>
+    <string name="ract_origen">Origen</string>
+    <string name="ract_registrar_actividad">Registrar Actividad</string>
+    <string name="rest_registrar_estimacion">Registrar Estimacion</string>
+    <string name="rest_tiempo_estimado">HH Estimadas:</string>
+    <string name="rest_actividad">Actividad</string>
+    <string name="rrea_actividad_para_el_dia_">Actividad para el dia 17/11</string>
+    <string name="rrea_hh_reales_">HH Reales:</string>
+    <string name="rrea_registrar_tiempo_real">Registrar Tiempo Real</string>
+    <string name="app_mreiact">Registrar Actividad</string>
+    <string name="app_ActividadPrincipal">Actividad Principal</string>
+    <string name="app_MainAsignarEstimado">Asignar Estimado</string>
+    <string name="app_mMainPlanificacion">Planificacion</string>
+    <string name="app_MainRegistrarActivReal">Registrar Actividad Real</string>
+    <string name="app_MainRegistrarPlanific">Registrar Planificacion</string>
+    
+    
     
    
 </resources>

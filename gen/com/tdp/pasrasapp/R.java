@@ -23,34 +23,88 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int telefonicalogo=0x7f020001;
+        public static final int logo2=0x7f020001;
+        public static final int telefonicalogo=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080007;
-        public static final int btningreso=0x7f080005;
-        public static final int claveUsuario=0x7f080004;
-        public static final int correoUsuario=0x7f080003;
-        public static final int editText1=0x7f080000;
-        public static final int imgenvista=0x7f080002;
-        public static final int linearLayout1=0x7f080001;
-        public static final int txtnuevo=0x7f080006;
+        public static final int action_settings=0x7f08001d;
+        public static final int btnActividad=0x7f08001c;
+        public static final int btnListar=0x7f080009;
+        public static final int btn_registrarActividad=0x7f080016;
+        public static final int btn_registrarEstimado=0x7f080005;
+        public static final int btningreso=0x7f08000e;
+        public static final int claveUsuario=0x7f08000d;
+        public static final int correoUsuario=0x7f08000c;
+        public static final int ed_dni=0x7f080002;
+        public static final int ed_nroIPR=0x7f080011;
+        public static final int ed_nroProy=0x7f080013;
+        public static final int ed_origen=0x7f080015;
+        public static final int ed_tiempoEstimado=0x7f080018;
+        public static final int ed_tiempoReal=0x7f08001a;
+        public static final int ed_tipoActividad=0x7f080004;
+        public static final int editText1=0x7f080006;
+        public static final int expandableListView1=0x7f080008;
+        public static final int gridView1=0x7f08001b;
+        public static final int imgenvista=0x7f08000b;
+        public static final int linearLayout1=0x7f08000a;
+        public static final int tx_TipoActividad=0x7f080003;
+        public static final int tx_nroIPR=0x7f080010;
+        public static final int tx_nroProy=0x7f080012;
+        public static final int tx_origen=0x7f080014;
+        public static final int tx_res=0x7f080001;
+        public static final int tx_sup=0x7f080007;
+        public static final int tx_tiempoEstimado=0x7f080017;
+        public static final int tx_tiempoReal=0x7f080019;
+        public static final int tx_titulo=0x7f080000;
+        public static final int txtnuevo=0x7f08000f;
     }
     public static final class layout {
         public static final int actividad_principal=0x7f030000;
-        public static final int menuprincipal=0x7f030001;
-        public static final int prlogueo=0x7f030002;
+        public static final int asignar_estimado=0x7f030001;
+        public static final int menuprincipal=0x7f030002;
+        public static final int planificacion=0x7f030003;
+        public static final int prlogueo=0x7f030004;
+        public static final int registrar_actividad=0x7f030005;
+        public static final int registrar_actividad_real=0x7f030006;
+        public static final int registrar_planificacion=0x7f030007;
     }
     public static final class menu {
         public static final int actividad_principal=0x7f070000;
     }
     public static final class string {
         public static final int action_settings=0x7f050003;
+        public static final int app_ActividadPrincipal=0x7f05001e;
+        public static final int app_MainAsignarEstimado=0x7f05001f;
+        public static final int app_MainRegistrarActivReal=0x7f050021;
+        public static final int app_MainRegistrarPlanific=0x7f050022;
+        public static final int app_mMainPlanificacion=0x7f050020;
+        public static final int app_mreiact=0x7f05001d;
         public static final int app_name=0x7f050000;
         public static final int app_namemenu=0x7f050001;
         public static final int hello_world=0x7f050002;
         public static final int lblNuevousuario=0x7f050007;
         public static final int lblboton=0x7f050006;
+        public static final int planificacion_de_actividades_semanales=0x7f05000d;
+        public static final int ra_agregar_actividad=0x7f05000f;
+        public static final int ract_actividad=0x7f050011;
+        public static final int ract_actividad_para_el_dia=0x7f050010;
+        public static final int ract_nro_ipr=0x7f050014;
+        public static final int ract_nro_proyecto=0x7f050013;
+        public static final int ract_origen=0x7f050015;
+        public static final int ract_registrar_actividad=0x7f050016;
+        public static final int ract_tipo_actividad=0x7f050012;
+        public static final int rest_actividad=0x7f050019;
+        public static final int rest_registrar_estimacion=0x7f050017;
+        public static final int rest_tiempo_estimado=0x7f050018;
+        public static final int rrea_actividad_para_el_dia_=0x7f05001a;
+        public static final int rrea_hh_reales_=0x7f05001b;
+        public static final int rrea_registrar_tiempo_real=0x7f05001c;
+        public static final int seleccionar_colaborador=0x7f05000b;
+        public static final int semana_a_registrar=0x7f05000e;
+        public static final int semana_planificacion=0x7f050009;
+        public static final int siguiente=0x7f05000a;
         public static final int textEmailAddress=0x7f050004;
+        public static final int txfechaprogramacion=0x7f05000c;
         public static final int txtclavelog=0x7f050005;
         public static final int txtusuariolog=0x7f050008;
     }

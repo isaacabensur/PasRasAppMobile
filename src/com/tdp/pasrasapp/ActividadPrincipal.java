@@ -113,7 +113,7 @@ public class ActividadPrincipal extends Activity {
 
     public void mostrarMenuPrincipal (){
         
-        Intent intent = new Intent(ActividadPrincipal.this,MainMenuPrincipal.class);
+        Intent intent = new Intent(ActividadPrincipal.this,MainPlanificacion.class);
  
  
  
