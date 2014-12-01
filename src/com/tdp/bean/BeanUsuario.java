@@ -15,6 +15,20 @@ public class BeanUsuario  implements Parcelable{
 	public int cod_tip;
 	public int idusuario;
 
+	
+	public BeanUsuario(int idusurio, String nombre){
+		this.idusuario = idusurio;
+		this.nombre = nombre;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return nombre;
+	}
+	public int getId() {
+		return idusuario;
+	}
 
 	public int getCod_tip() {
 		return cod_tip;

@@ -15,4 +15,21 @@ public class BeanTipoActividad {
 	public void setDescripcion_actividad(String descripcion_actividad) {
 		this.descripcion_actividad = descripcion_actividad;
 	}
+	
+	
+	public BeanTipoActividad(int id_tipo_actividad, String descripcion_actividad){
+		this.id_tipo_actividad = id_tipo_actividad;
+		this.descripcion_actividad = descripcion_actividad;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return descripcion_actividad;
+	}
+	public int getId() {
+		return id_tipo_actividad;
+	}
+	
+	
 }

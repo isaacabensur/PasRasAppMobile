@@ -38,6 +38,8 @@
     <string name="app_mMainPlanificacion">Planificacion</string>
     <string name="app_MainRegistrarActivReal">Registrar Actividad Real</string>
     <string name="app_MainRegistrarPlanific">Registrar Planificacion</string>
+    <string name="txtnombre">txtnombre</string>
+    <string name="txttelefono">txttelefono</string>
     
     
     

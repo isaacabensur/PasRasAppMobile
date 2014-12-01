@@ -10,7 +10,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/planificacion_de_actividades_semanales" 
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             />   	 
     
@@ -32,7 +32,11 @@
             />
 
         
-        
+        <LinearLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="40dp"
+    		android:orientation="horizontal"
+    	>
         <TextView
             android:id="@+id/tx_TipoActividad"
             android:layout_width="wrap_content"
@@ -40,61 +44,67 @@
             android:text="@string/ract_tipo_actividad" 
             android:layout_marginBottom="10dp"
             />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         
-        <EditText
-            android:id="@+id/ed_tipoActividad"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:inputType="text"
-            android:hint="@string/ract_tipo_actividad" 
-            android:layout_marginBottom="10dp"
-            />
+        </LinearLayout>
         
+        <LinearLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="40dp"
+    		android:orientation="horizontal"
+    	>
         <TextView
             android:id="@+id/tx_nroIPR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ract_nro_ipr"
             />
-        <EditText
-            android:id="@+id/ed_nroIPR"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:inputType="text"
-            android:hint="@string/ract_tipo_actividad" 
-            android:layout_marginBottom="10dp"           
-            />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
             
+        </LinearLayout>
+         <LinearLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="40dp"
+    		android:orientation="horizontal"
+    	>
         <TextView
             android:id="@+id/tx_nroProy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ract_nro_proyecto"            
             />
-        <EditText
-            android:id="@+id/ed_nroProy"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:inputType="text"
-            android:hint="@string/ract_tipo_actividad" 
-            android:layout_marginBottom="10dp"
-            />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        </LinearLayout>
         
+         <LinearLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="40dp"
+    		android:orientation="horizontal"
+    	>
         <TextView
             android:id="@+id/tx_origen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ract_origen"
             />
-        <EditText
-            android:id="@+id/ed_origen"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:inputType="text"
-            android:hint="@string/ract_origen" 
-            android:layout_marginBottom="10dp"
-            />
-        
+
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        </LinearLayout>
          <Button
             android:id="@+id/btn_registrarActividad"
             style="@style/AppTheme"

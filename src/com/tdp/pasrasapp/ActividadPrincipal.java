@@ -111,27 +111,17 @@ public class ActividadPrincipal extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-    public void mostrarMenuPrincipal (){
+    public void mostrarMenuPrincipal (BeanUsuario poBusu){
         
+    	System.out.println("APELIIDOSSSS: +++" + poBusu.getIdusuario() );
         Intent intent = new Intent(ActividadPrincipal.this,MainPlanificacion.class);
- 
- 
- 
- 
-Bundle bun = new Bundle();
- 
- 
- 
-// asignamos al intent los parametros a enviar
-intent.putExtra("beanusuario", be);
-// cambiamos de activity
- 
- 
-startActivity(intent);
- 
- 
- 
- 
+        Bundle bun = new Bundle();
+        bun.putString("idUsuario", "" + poBusu.getIdusuario() );
+        
+        // asignamos al intent los parametros a enviar
+    	intent.putExtra("beanusuario", bun);
+    	// cambiamos de activity 
+    	startActivity(intent);
     }
 
 	public void validacionTerminada(String jsonResult) {
@@ -189,7 +179,7 @@ startActivity(intent);
 	                 
 	                //verificaUsuario("");
 	                
-	                mostrarMenuPrincipal();  
+	                mostrarMenuPrincipal(be);  
 	                 
 	            }else{
 	 

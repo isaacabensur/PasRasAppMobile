@@ -15,4 +15,19 @@ public class BeanProyecto {
 	public void setNro_proyecto(int nro_proyecto) {
 		this.nro_proyecto = nro_proyecto;
 	}
+	
+	public BeanProyecto(int id_proyecto, int nro_proyecto){
+		this.id_proyecto = id_proyecto;
+		this.nro_proyecto = nro_proyecto;		
+	}
+	
+	@Override
+	public String toString() {
+		return "" + nro_proyecto;
+	}
+	public int getId() {
+		return id_proyecto;
+	}
+	
+	
 }

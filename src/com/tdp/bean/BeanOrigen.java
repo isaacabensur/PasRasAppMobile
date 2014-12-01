@@ -16,4 +16,20 @@ public class BeanOrigen {
 	public void setDescripcion_origen(String descripcion_origen) {
 		this.descripcion_origen = descripcion_origen;
 	}
+	
+	public BeanOrigen(int id_origen, String descripcion_origen){
+		this.id_origen = id_origen;
+		this.descripcion_origen = descripcion_origen;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return descripcion_origen;
+	}
+	public int getId() {
+		return id_origen;
+	}
+	
+	
 }

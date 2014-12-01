@@ -15,5 +15,22 @@ public class BeanIpr {
 		this.nro_ipr = nro_ipr;
 	}
 	int nro_ipr;
+
+	
+	public BeanIpr(int id_ipr, int nro_ipr){
+		this.id_ipr = id_ipr;
+		this.nro_ipr = nro_ipr;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "" + nro_ipr;
+	}
+	public int getId() {
+		return id_ipr;
+	}
+	
+	
 	
 }
