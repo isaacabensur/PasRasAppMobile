@@ -61,7 +61,7 @@ public class TipoActividadAdapter extends ArrayAdapter<BeanTipoActividad> {
 		}
 
 		if (tv_idTipoActividad != null) {
-			tv_idTipoActividad.setText(item.getId_tipo_actividad());
+			tv_idTipoActividad.setText("" + item.getId_tipo_actividad());
 		}
 		
 		return nuevaVista;

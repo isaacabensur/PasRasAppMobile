@@ -58,7 +58,7 @@ public class OrigenAdapter extends ArrayAdapter<BeanOrigen> {
 		}
 
 		if (tv_idOrigen != null) {
-			tv_idOrigen.setText(item.getId_origen());
+			tv_idOrigen.setText("" +item.getId_origen());
 		}
 		
 		return nuevaVista;

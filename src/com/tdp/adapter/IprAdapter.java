@@ -54,11 +54,11 @@ public class IprAdapter extends ArrayAdapter<BeanIpr>{
 		TextView tv_nroIpr = (TextView) nuevaVista.findViewById(R.id.tv_nroIpr);
 
 		if (tv_nroIpr != null) {
-			tv_nroIpr.setText(item.getNro_ipr());
+			tv_nroIpr.setText("" + item.getNro_ipr());
 		}
 
 		if (tv_idIpr != null) {
-			tv_idIpr.setText(item.getId_ipr());
+			tv_idIpr.setText("" + item.getId_ipr());
 		}
 		
 		return nuevaVista;

@@ -57,11 +57,11 @@ public class ProyectoAdapter extends ArrayAdapter<BeanProyecto> implements Filte
 		TextView tv_nroProyecto = (TextView) nuevaVista.findViewById(R.id.tv_nroProyecto);
 
 		if (tv_nroProyecto != null) {
-			tv_nroProyecto.setText(item.getNro_proyecto());
+			tv_nroProyecto.setText("" + item.getNro_proyecto());
 		}
 
 		if (tv_idProyecto != null) {
-			tv_idProyecto.setText(item.getId_proyecto());
+			tv_idProyecto.setText("" +item.getId_proyecto());
 		}
 		
 		return nuevaVista;

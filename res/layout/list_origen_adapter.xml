@@ -5,25 +5,28 @@
     android:orientation="vertical" >
     
     <TextView
-        android:id="@+id/tv_idOrigen"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text="@string/txtnombre"
-        >        
-        
-    </TextView>
-
-    <TextView
         android:id="@+id/tv_descripcionOrigen"        
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
-        android:visibility="gone"
+        
         android:text="@string/txttelefono"
          >
     </TextView>
+    
+    <TextView
+        android:id="@+id/tv_idOrigen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:text="@string/txtnombre"
+        >        
+        
+    </TextView>
+
+    
     
     
 

@@ -23,7 +23,7 @@
             />
         
         <EditText
-            android:id="@+id/ed_dni"
+            android:id="@+id/ed_registrarActividad"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:inputType="text"
