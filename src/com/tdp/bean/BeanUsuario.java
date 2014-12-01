@@ -16,13 +16,6 @@ public class BeanUsuario  implements Parcelable{
 	public int idusuario;
 
 
-
-
-
-
-
-
-
 	public int getCod_tip() {
 		return cod_tip;
 	}
