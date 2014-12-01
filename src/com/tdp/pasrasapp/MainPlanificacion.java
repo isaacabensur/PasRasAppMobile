@@ -40,24 +40,6 @@ protected void onCreate(Bundle savedInstanceState) {
 	Spinner spn_colaborador = (Spinner) findViewById(R.id.spn_colaborador);
 	
 	
-	LinkedList<BeanUsuario> lstUsuario = new LinkedList<BeanUsuario>();
-	List<BeanUsuario> arrUsuario = new ArrayList<BeanUsuario>();
-	BeanUsuario oUsuario = null;
-	
-	lstUsuario.add(new BeanUsuario(1,"Max"));
-	lstUsuario.add(new BeanUsuario(2,"Jaime"));
-	lstUsuario.add(new BeanUsuario(3,"Cesar"));
-	
-	oUsuario = new BeanUsuario();	
-	oUsuario.setNombre("Max");
-	oUsuario.setIdusuario(100);
-	arrUsuario.add(oUsuario);
-	
-	oUsuario = new BeanUsuario();	
-	oUsuario.setNombre("Jaime");
-	oUsuario.setIdusuario(99);
-	arrUsuario.add(oUsuario);
-	
 	
 			
 	String idUsuario = "";
@@ -77,7 +59,9 @@ protected void onCreate(Bundle savedInstanceState) {
     	tv_idUsuario.setText("id desconocido");
     }
     
-	adapUsuario = new UsuarioAdapter(this, R.layout.list_usuario_adapter , arrUsuario );
+    List<BeanUsuario> lstUsuario = new ArrayList<BeanUsuario>();	
+	lstUsuario = MainController.getInstance().lstUsuario;
+	adapUsuario = new UsuarioAdapter(this, R.layout.list_usuario_adapter , lstUsuario );
 	//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list );
 	//adapUsuario.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 	   

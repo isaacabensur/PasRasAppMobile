@@ -43,11 +43,11 @@ public final class R {
         public static final int gridView1=0x7f080027;
         public static final int imgenvista=0x7f080016;
         public static final int linearLayout1=0x7f080015;
-        public static final int spinner1=0x7f08001b;
-        public static final int spinner2=0x7f08001d;
-        public static final int spinner3=0x7f08001f;
-        public static final int spinner4=0x7f080021;
         public static final int spn_colaborador=0x7f080013;
+        public static final int spn_ipr=0x7f08001d;
+        public static final int spn_origen=0x7f080021;
+        public static final int spn_proyecto=0x7f08001f;
+        public static final int spn_tipoActividad=0x7f08001b;
         public static final int tv_descricionActividad=0x7f08000d;
         public static final int tv_descripcionOrigen=0x7f080009;
         public static final int tv_idIpr=0x7f080006;

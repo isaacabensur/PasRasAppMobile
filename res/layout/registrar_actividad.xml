@@ -46,7 +46,7 @@
             />
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/spn_tipoActividad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         
@@ -65,7 +65,7 @@
             />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spn_ipr"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
             
@@ -83,7 +83,7 @@
             />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spn_proyecto"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
         </LinearLayout>
@@ -101,7 +101,7 @@
             />
 
         <Spinner
-            android:id="@+id/spinner4"
+            android:id="@+id/spn_origen"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
         </LinearLayout>

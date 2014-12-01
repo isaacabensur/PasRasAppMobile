@@ -18,7 +18,7 @@ public class MainController {
 
 	public static MainController instance = null;
 	//public DateTimeBean currDateTimeBean = null;
-	public ArrayList<BeanUsuario> lstBeanPhone;
+	public ArrayList<BeanUsuario> lstUsuario;
 	public ArrayList<BeanProyecto> lstProyecto;
 	public ArrayList<BeanOrigen> lstOrigen;
 	public ArrayList<BeanIpr> lstIpr;
@@ -33,7 +33,7 @@ public class MainController {
 
 	
 	public MainController() {
-		lstBeanPhone = new ArrayList<BeanUsuario>();
+		lstUsuario = new ArrayList<BeanUsuario>();
 		lstProyecto = new ArrayList<BeanProyecto>();
 		lstOrigen = new ArrayList<BeanOrigen>();
 		lstIpr = new ArrayList<BeanIpr>();
@@ -50,9 +50,9 @@ public class MainController {
 		String imagen2 = "http://www.jblog.fr/images/modules/annuaire_.png";
 		
 		bean = new BeanUsuario(1,"Max");
-		lstBeanPhone.add(bean);
+		lstUsuario.add(bean);
 		bean = new BeanUsuario(2,"Jaime");
-		lstBeanPhone.add(bean);
+		lstUsuario.add(bean);
 
 		oProyecto = new BeanProyecto(1, 45);
 		lstProyecto.add(oProyecto);

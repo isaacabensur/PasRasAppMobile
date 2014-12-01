@@ -1,5 +1,6 @@
 package com.tdp.adapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
@@ -7,14 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tdp.bean.BeanProyecto;
-import com.tdp.bean.BeanProyecto;
 import com.tdp.pasrasapp.R;
 
-public class ProyectoAdapter extends ArrayAdapter<BeanProyecto> {
+public class ProyectoAdapter extends ArrayAdapter<BeanProyecto> implements Filterable{
 
 	Context context;
 	List<BeanProyecto> items;
@@ -81,4 +83,43 @@ public class ProyectoAdapter extends ArrayAdapter<BeanProyecto> {
     {
         return position;
     }
+    Filter myFilter = new Filter() { 
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+         FilterResults filterResults = new FilterResults();   
+         List<BeanProyecto> tempList=new ArrayList<BeanProyecto>();
+         //constraint is the result from text you want to filter against. 
+         //objects is your data set you will filter from
+         if(constraint != null && items!=null) {
+             int length=items.size();
+             int i=0;
+                while(i<length){
+                	BeanProyecto item=items.get(i);
+
+                	if (( "" + item.getNro_proyecto()).toLowerCase().contains(constraint.toString().toLowerCase())){
+                		tempList.add(item);	
+                	}
+                    i++;
+                }
+                //following two lines is very important
+                //as publish result can only take FilterResults objects
+                filterResults.values = tempList;
+                filterResults.count = tempList.size();
+          }
+          return filterResults;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      protected void publishResults(CharSequence contraint, FilterResults results) {
+    	  filteredData = (ArrayList<BeanProyecto>) results.values;
+          if (results.count > 0) {
+        	  notifyDataSetChanged();
+          } else {
+              notifyDataSetInvalidated();
+          }  
+      }
+     };
+     
+     
 }
