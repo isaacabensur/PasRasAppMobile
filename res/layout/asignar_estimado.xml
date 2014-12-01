@@ -22,7 +22,7 @@
             />
         
         <EditText
-            android:id="@+id/ed_dni"
+            android:id="@+id/ed_descripcionActividadEstimada"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:inputType="text"
@@ -42,7 +42,7 @@
             />
         
         <EditText
-            android:id="@+id/ed_tipoActividad"
+            android:id="@+id/ed_horaEstimada"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:inputType="text"

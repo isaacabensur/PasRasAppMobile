@@ -40,6 +40,7 @@
     <string name="app_MainRegistrarPlanific">Registrar Planificacion</string>
     <string name="txtnombre">txtnombre</string>
     <string name="txttelefono">txttelefono</string>
+    <string name="_Separador">" - "</string>
     
     
     

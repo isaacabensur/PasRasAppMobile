@@ -49,9 +49,13 @@ public class MainController {
 		String imagen = "http://www.hum.unrc.edu.ar/imgs/digesto.png";
 		String imagen2 = "http://www.jblog.fr/images/modules/annuaire_.png";
 		
-		bean = new BeanUsuario(1,"Max");
+		bean = new BeanUsuario(1,"ISAAC");
 		lstUsuario.add(bean);
-		bean = new BeanUsuario(2,"Jaime");
+		bean = new BeanUsuario(2,"JAIME");
+		lstUsuario.add(bean);
+		bean = new BeanUsuario(3,"MAX");
+		lstUsuario.add(bean);
+		bean = new BeanUsuario(4,"JUAN");
 		lstUsuario.add(bean);
 
 		oProyecto = new BeanProyecto(1, 45);

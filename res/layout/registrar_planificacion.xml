@@ -15,18 +15,25 @@
     	 
     
         <TextView
-            android:id="@+id/tx_res"
+            android:id="@+id/tv_subTituloRegistrarPlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/semana_a_registrar" 
             android:layout_marginBottom="10dp"
-            />
-
+            />        
+        <ListView
+	    android:id="@+id/lv_Planificacion"
+	    android:layout_width="match_parent"
+	    android:background="@android:color/darker_gray"
+	    android:layout_height="187dp" >
+    	</ListView>
+    
         <GridView
-            android:id="@+id/gridView1"
+            android:id="@+id/gv_Planificacion"
             android:layout_width="290dp"
-            android:layout_height="187dp"
-            android:numColumns="8" >
+            android:layout_height="10dp"
+            android:numColumns="8"
+            android:visibility="gone" >
             
         </GridView>
         

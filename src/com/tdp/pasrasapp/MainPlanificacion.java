@@ -4,16 +4,36 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.tdp.adapter.ActividadAdapter;
 import com.tdp.adapter.UsuarioAdapter;
+import com.tdp.bean.BeanActividad;
+import com.tdp.bean.BeanOrigen;
 import com.tdp.bean.BeanUsuario;
 import com.tdp.controlador.MainController;
+import com.tdp.util.Constants;
+import com.tdp.util.RequestAsynctask;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -28,6 +48,8 @@ public class MainPlanificacion extends Activity{
 	Spinner spn_colaborador;
 	UsuarioAdapter adapUsuario;
 	int alimentoId;
+	RequestAsynctask request;
+	String idUsuario = "";
 	
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +64,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	
 	
 			
-	String idUsuario = "";
+	
 	
 	Intent startingIntent = this.getIntent();
     if (startingIntent != null)
@@ -80,70 +102,96 @@ protected void onCreate(Bundle savedInstanceState) {
 		super.onResume();
 		
 		
+		request = new RequestAsynctask(this);
+		
 		btnListar.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				
-				registrarPlanificacion();
-				 Intent intent = new Intent(MainPlanificacion.this,MainRegistrarPlanific.class);
-				 Bundle bun = new Bundle();
-				 startActivity(intent);
+				 registrarPlanificacion();
+				 	
+				 
 				
 			}
 		});
 		
-		/*
-		  spn_colaborador.setOnItemSelectedListener(new OnItemSelectedListener() {
-		 	
-			public void onItemSelected(AdapterView<?> parentView, View selectedItemView,int position, long id ){
-				
-				//Toast.makeText(parentView.getContext(), 
-				//			"has seleccionado: " + parentView.getItemAtPosition(position).toString() , Toast.LENGTH_SHORT).show();
-				
-			}
-			
-			public void onNothingSelected(AdapterView<?> parentView){
-				
-				
-			}
-			
-		});
-		  */
 		
 	}
+
+
 
 void registrarPlanificacion(){
 	TextView tv_idUsuario = (TextView) findViewById(R.id.tv_idUsuario);
 	Spinner spn_colaborador = (Spinner) findViewById(R.id.spn_colaborador);
 	
-	int id_user_coordinador = 0;
-	int id_user_colaborador = 0;
+	String error = "";
+	String id_user_coordinador =  idUsuario;
+	String id_user_colaborador = "" + ( (BeanUsuario) spn_colaborador.getItemAtPosition(spn_colaborador.getSelectedItemPosition()) ).getId() ;
 	
+	//http://tallerandroid.cesar-pillihuaman.com/index.php/planificacion_insert?
+	//id_user_colaborador=1&id_user_coordinador=3
 	
-	
+	String url = Constants.API
+            + "index.php/planificacion_insert?"  
+            + "id_user_colaborador=" + id_user_colaborador + "&"
+            + "id_user_coordinador=" + id_user_coordinador + ""
+           ; 
+    System.out.println("URL : "+url);
+     
+    request.registrarPlanificacion(url);  
 	
 	
 	
 }
 
-
-
-
-public class MyOnItemSelectedListener implements OnItemSelectedListener {
-	public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
-		if (parent.getId() == R.id.spn_colaborador) {
-			alimentoId = ((BeanUsuario) parent.getItemAtPosition(pos)).getId();
-		}
-		Toast.makeText(parent.getContext(), 
-				"has seleccionado: " + alimentoId , Toast.LENGTH_SHORT).show();
+public void irRegistrarActividadesPlanificacion(String jsonResult){
 	
-		//Podemos hacer varios ifs o un switchs por si tenemos varios spinners.
-	}
-	public void onNothingSelected(AdapterView<?> parent) {
-		// Do nothing.
-	}
+	String id_planificacion="";
+	TextView tv_idUsuario = (TextView) findViewById(R.id.tv_idUsuario);
+	//tv_idUsuario.setText(jsonResult);
+	
+	 try {
+     	JSONArray respJSON = new JSONArray(jsonResult);
+         
+         if ( respJSON != null  ) {
+          
+			int n = respJSON.length();             
+             for (int i = 0; i < n; i++) {
+
+					JSONObject obj = respJSON.getJSONObject(i);
+					id_planificacion = obj.getString("id");				
+					
+					if(!id_planificacion.equalsIgnoreCase("")){
+						tv_idUsuario.setText(id_planificacion);
+					}
+				} 
+             
+              
+         }else{
+
+             Toast.makeText(this, "Id Planificacion no generado", Toast.LENGTH_SHORT).show();
+         }
+          
+     } catch (JSONException e) {
+          
+         e.printStackTrace();
+     }
+	 
+	 
+	
+	Intent intent = new Intent(MainPlanificacion.this,MainRegistrarPlanific.class);
+	Bundle bun = new Bundle();
+	bun.putString("id_planificacion", id_planificacion);
+	intent.putExtra("bunPlanificacion",bun);
+	
+	startActivity(intent);
 }
+
+
+
+
+
 
 
 
