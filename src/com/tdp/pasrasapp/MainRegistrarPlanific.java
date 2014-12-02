@@ -37,7 +37,7 @@ public class MainRegistrarPlanific extends Activity{
 	
 	Button btnActividad;
 	RequestAsynctask request;
-	ListView lv_Planificacion = (ListView) findViewById(R.id.lv_Planificacion) ;
+	
 	 
 	
 	@Override
@@ -155,7 +155,7 @@ public class MainRegistrarPlanific extends Activity{
 		 Log.d("VALIDA",jsonResult);
         
 		 //GridView gv_Planificacion = (GridView) findViewById(R.id.gv_Planificacion) ;
-		
+		 ListView lv_Planificacion = (ListView) findViewById(R.id.lv_Planificacion) ;
 		 
 		 
 	        try {

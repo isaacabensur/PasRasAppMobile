@@ -14,6 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -152,15 +153,16 @@ public void irRegistrarActividadesPlanificacion(String jsonResult){
 	//tv_idUsuario.setText(jsonResult);
 	
 	 try {
+		 
 		 JSONObject jsonData = new JSONObject(jsonResult);
 		 
          if (jsonData.getString(Constants.APIresponse).equals(Constants.apiVarErrorOK)) {
               
          	//RECIIMOS DATOS DEL USUARIO Y GENERAMOS UN REGISTRO EN SQLITE
               
-             JSONObject dato = jsonData.getJSONObject(Constants.APIdata);
+             //JSONObject dato = jsonData.getJSONObject(Constants.APIdata);
               
-             id_planificacion  = dato.getString("id");              
+             id_planificacion  = jsonData.getString("id");              
             
 		 /*
      	JSONArray respJSON = new JSONArray(jsonResult);
@@ -181,7 +183,7 @@ public void irRegistrarActividadesPlanificacion(String jsonResult){
               
          }else{
 
-             Toast.makeText(this, "Id Planificacion no generado", Toast.LENGTH_SHORT).show();
+          //   Toast.makeText(this, "Id Planificacion no generado", Toast.LENGTH_SHORT).show();
          }
           
      } catch (JSONException e) {
