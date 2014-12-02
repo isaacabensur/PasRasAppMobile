@@ -37,6 +37,8 @@ public class MainRegistrarPlanific extends Activity{
 	
 	Button btnActividad;
 	RequestAsynctask request;
+	ListView lv_Planificacion = (ListView) findViewById(R.id.lv_Planificacion) ;
+	 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -153,7 +155,7 @@ public class MainRegistrarPlanific extends Activity{
 		 Log.d("VALIDA",jsonResult);
         
 		 //GridView gv_Planificacion = (GridView) findViewById(R.id.gv_Planificacion) ;
-		 ListView lv_Planificacion = (ListView) findViewById(R.id.lv_Planificacion) ;
+		
 		 
 		 
 	        try {
@@ -214,28 +216,25 @@ public class MainRegistrarPlanific extends Activity{
 	                ActividadAdapter adapActividad= new ActividadAdapter(this, R.layout.list_actividad_adapter, lstActividad);
 	                lv_Planificacion.setAdapter(adapActividad);
 	                
-	                
+	                /*
 	                lv_Planificacion.setOnItemClickListener(new OnItemClickListener() {
+	                	
 	        			public void onItemClick(
 	        					AdapterView<?> parent, View v,
 	        					int position, long id) {
-	        				
+	        				String strId_Actividad = "";
 	        				BeanActividad oActividad = new BeanActividad();
-	        				mostrarAlerta();
-	        				/*
-	        				 * 
-	        				Lista_contratos oContratoSelect = new Lista_contratos();
-	        				oContratoSelect = (Lista_contratos) lstClientes.getItemAtPosition(position);
-
-	        				String pNro_contrato = oContratoSelect.getNro_contrato();
+	        				oActividad = (BeanActividad) lv_Planificacion.getItemAtPosition(position);
+	        				strId_Actividad = "" + oActividad.getId_actividad();
+	        				mostrarAlerta(strId_Actividad);
 	        				
-	        				NavigationManager.navegarAActivityDetail(PagosActivity.this, 
-	        						pNro_contrato,"pNroDni", "2","0");
-	        				 */			
+	        				  
+	        				
+	        							
 	        				
 	        			}
 	        		});
-	                
+	                 */
 	                
 	                 
 	            }else{
@@ -249,8 +248,8 @@ public class MainRegistrarPlanific extends Activity{
 	        }
 	}
 	
-	void mostrarAlerta(){
-		Toast.makeText(this, "demo", Toast.LENGTH_SHORT).show();
+	void mostrarAlerta(String strId_Actividad){
+		Toast.makeText(this, strId_Actividad, Toast.LENGTH_SHORT).show();
 	}
 	
 

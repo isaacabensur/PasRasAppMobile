@@ -13,7 +13,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -152,6 +152,17 @@ public void irRegistrarActividadesPlanificacion(String jsonResult){
 	//tv_idUsuario.setText(jsonResult);
 	
 	 try {
+		 JSONObject jsonData = new JSONObject(jsonResult);
+		 
+         if (jsonData.getString(Constants.APIresponse).equals(Constants.apiVarErrorOK)) {
+              
+         	//RECIIMOS DATOS DEL USUARIO Y GENERAMOS UN REGISTRO EN SQLITE
+              
+             JSONObject dato = jsonData.getJSONObject(Constants.APIdata);
+              
+             id_planificacion  = dato.getString("id");              
+            
+		 /*
      	JSONArray respJSON = new JSONArray(jsonResult);
          
          if ( respJSON != null  ) {
@@ -166,7 +177,7 @@ public void irRegistrarActividadesPlanificacion(String jsonResult){
 						tv_idUsuario.setText(id_planificacion);
 					}
 				} 
-             
+         */    
               
          }else{
 
