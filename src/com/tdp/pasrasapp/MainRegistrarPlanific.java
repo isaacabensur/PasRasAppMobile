@@ -1,6 +1,7 @@
 package com.tdp.pasrasapp;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.http.util.EntityUtils;
@@ -10,6 +11,9 @@ import org.json.JSONObject;
 
 import com.tdp.adapter.ActividadAdapter;
 import com.tdp.bean.BeanActividad;
+import com.tdp.bean.BeanPlanificacion;
+import com.tdp.bean.BeanUsuario;
+import com.tdp.controlador.MainController;
 import com.tdp.util.Constants;
 import com.tdp.util.RequestAsynctask;
 
@@ -87,17 +91,23 @@ public class MainRegistrarPlanific extends Activity{
 		int id_actividad = 0; 
 		String	id_planificacion = "";
 		String descripcion_actividad = "";
+		String codTipo = "";
+		String idUsuario = "";
 		String cad = "no data";
+		
 		
 		Intent startingIntent = this.getIntent();
 	    if (startingIntent != null)
 	    {
 	    	Bundle b = startingIntent.getBundleExtra("bunPlanificacion");
 	         if (b != null) {
-	        	 //id_actividad = b.getInt("id_actividad"); 
-	        	 id_planificacion = b.getString("id_planificacion"); 
-	        	 //descripcion_actividad = b.getString("descripcion_actividad"); 
-	        	 
+	        	 id_planificacion = b.getString("id_planificacion");
+	         }
+	         
+	         Bundle bCola = startingIntent.getBundleExtra("beanUsuarioCola");
+	         if (bCola != null) {	        	  
+	        	 idUsuario = bCola.getString("idUsuario"); 
+	        	 codTipo = bCola.getString("codTipo");
 	         }
 	    }
 		
@@ -110,6 +120,16 @@ public class MainRegistrarPlanific extends Activity{
 	    if( !descripcion_actividad.equalsIgnoreCase("") ){
 	    	cad = cad +descripcion_actividad;
 	    }
+	    if( !idUsuario.equalsIgnoreCase("")){
+	    	cad = cad + "" + idUsuario;
+	    }
+	    if( !codTipo.equalsIgnoreCase("") ){
+	    	cad = cad +codTipo;
+	    }
+	    
+	    
+	    
+	    
 	    
 	    tv_subTituloRegistrarPlan.setText(cad);
 	}
@@ -150,6 +170,7 @@ public class MainRegistrarPlanific extends Activity{
 					
 	                BeanActividad oActividad = null;
 	                List<BeanActividad> lstActividad = new ArrayList<BeanActividad>();
+	                List<BeanActividad> lstActividadFiltrada = new ArrayList<BeanActividad>();
 	                
 	                for (int i = 0; i < n; i++) {
 
@@ -158,14 +179,37 @@ public class MainRegistrarPlanific extends Activity{
 						
 						String descripcion_actividad = obj.getString("descripcionActividad");
 						int idActividad = obj.getInt("idActividad");
+						int idPlanificacion = obj.getInt("idPlanificacion");
 						
 						oActividad.setId_actividad( idActividad );
 						oActividad.setDescripcion_actividad(descripcion_actividad );
+						oActividad.setId_planificacion(idPlanificacion );
 						
 						if(idActividad != 0){
 							lstActividad.add(oActividad);
 						}
 					}
+	                
+	                
+	                List<BeanPlanificacion> olsPlanificacion = new LinkedList<BeanPlanificacion>();
+	               
+	                /*
+                	for (BeanUsuario oUsu : olsPlanificacion){
+	                	
+	                	if (oAct.getId_planificacion() == 1 ) {
+	                		lstActividadFiltrada.add(oAct);	                		
+	                	}
+	                }
+	                
+	                
+	                
+	                for (BeanActividad oAct : lstActividad){
+	                	
+	                	if (oAct.getId_planificacion() == 1 ) {
+	                		lstActividadFiltrada.add(oAct);	                		
+	                	}
+	                } 
+	                */
 	                
 	                ActividadAdapter adapActividad= new ActividadAdapter(this, R.layout.list_actividad_adapter, lstActividad);
 	                lv_Planificacion.setAdapter(adapActividad);
